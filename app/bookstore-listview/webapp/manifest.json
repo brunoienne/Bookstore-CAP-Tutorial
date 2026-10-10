@@ -128,7 +128,15 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Books"
+              "contextPath": "/Books",
+              "sectionLayout": "Page",
+              "controlConfiguration": {
+                "Chapters/@com.sap.vocabularies.UI.v1.LineItem#Chapters": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              }
             }
           }
         }
