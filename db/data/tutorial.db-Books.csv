@@ -1,6 +1,6 @@
-ID,title,author_ID,genre,publishedAt,pages,price,createdAt,createdBy,modifiedAt,modifiedBy
-20367169-88ef-4ef1-adda-3e39fb0bce33,title-20367169,15188698-3793-4f6c-a79f-4182775ef74d,genre-20367169,2014-09-06,66,1435564.4,2018-12-19T00:00:00.000Z,createdBy.c4jep@example.org,2016-10-22T00:00:00.000Z,modifiedBy.c4jep@example.net
-20367170-c38c-40d3-b287-119af242dd6b,title-20367170,15188698-3793-4f6c-a79f-4182775ef74d,genre-20367170,2010-02-09,88,281292.5,2007-10-06T00:00:00.000Z,createdBy.c4jeq@example.org,2021-10-24T00:00:00.000Z,modifiedBy.c4jeq@example.org
-20367171-2087-4c6e-81b7-d4e3938f5260,title-20367171,15188698-3793-4f6c-a79f-4182775ef74d,genre-20367171,2008-11-14,10,6077760.29,2019-03-06T00:00:00.000Z,createdBy.c4jer@example.com,2017-11-21T00:00:00.000Z,modifiedBy.c4jer@example.net
-20367172-47dd-4591-9da8-4aabb045393d,title-20367172,15188698-3793-4f6c-a79f-4182775ef74d,genre-20367172,2019-07-30,45,4166670.54,2012-09-08T00:00:00.000Z,createdBy.c4jes@example.org,2022-03-20T00:00:00.000Z,modifiedBy.c4jes@example.org
-20367173-97a3-4407-891a-028ad26a94fc,title-20367173,15188698-3793-4f6c-a79f-4182775ef74d,genre-20367173,2006-07-01,65,5321654.63,2003-10-17T00:00:00.000Z,createdBy.c4jet@example.com,2004-10-01T00:00:00.000Z,modifiedBy.c4jet@example.com
+ID,title,author_ID,genre,publishedAt,pages,price,stock,status_code,createdAt,createdBy,modifiedAt,modifiedBy
+60319364-7322-4a78-9318-75d4e42d7805,O Hobbit,13351322-a5af-4cf9-adb1-63d8d9f9a9eb,Aventura,2022-06-13,7,9397265.92,100,A,2001-06-13T00:00:00.000Z,createdBy.3la9s@example.org,2018-04-27T00:00:00.000Z,modifiedBy.3la9s@example.net
+60319379-2b59-45e1-bbef-e38f0ae73f9d,A fantástica fábrica de chocolate,13351322-a5af-4cf9-adb1-63d8d9f9a9eb,Aventura,2003-07-23,98,1570686.44,9,L,2003-06-12T00:00:00.000Z,createdBy.3la9t@example.com,2008-04-27T00:00:00.000Z,modifiedBy.3la9t@example.org
+6031938b-ac7e-4449-8f52-627397b508d4,O Senhor dos Anéis,13351322-a5af-4cf9-adb1-63d8d9f9a9eb,Aventura,2016-01-10,77,1390864.97,3,U,2015-07-31T00:00:00.000Z,createdBy.3la9u@example.com,2002-07-22T00:00:00.000Z,modifiedBy.3la9u@example.net
+60319391-5c62-4602-8f7b-2c78827558eb,Crepúsculo,13351322-a5af-4cf9-adb1-63d8d9f9a9eb,Romance,2018-10-30,78,4384893.21,10,L,2001-09-18T00:00:00.000Z,createdBy.3la9v@example.com,2011-04-21T00:00:00.000Z,modifiedBy.3la9v@example.net
+6031940e-5f0b-4dd9-b7df-602602525f8e,50 tons de cinza,13351322-a5af-4cf9-adb1-63d8d9f9a9eb,Dark romance,2007-11-22,24,8240275.57,22,A,2017-05-07T00:00:00.000Z,createdBy.3la9w@example.net,2014-06-29T00:00:00.000Z,modifiedBy.3la9w@example.org
