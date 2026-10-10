@@ -4,10 +4,26 @@
   "description": "Welcome to your new CAP project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cds serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-bookstore-listview": "cds watch --open bookstorelistview/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "@cap-js/sqlite": "^3.1.1",
+    "@sap/cds": "^10.1.1"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^10.1.0",
+    "cds-plugin-ui5": "0.13.6"
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/bookstore-listview"
+  ]
 }
