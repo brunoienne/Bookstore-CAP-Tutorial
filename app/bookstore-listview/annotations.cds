@@ -5,6 +5,16 @@ annotate service.Books with @(
         Data : [
             {
                 $Type : 'UI.DataField',
+                Value : title,
+                Label : 'Title',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : genre,
+                Label : 'Genre',
+            },
+            {
+                $Type : 'UI.DataField',
                 Label : 'Published At',
                 Value : publishedAt,
             },
@@ -190,6 +200,18 @@ annotate service.Books with {
     status @(
         Common.Text : status.displayText,
         Common.Text.@UI.TextArrangement : #TextOnly,
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'BookStatus',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : status_code,
+                    ValueListProperty : 'code',
+                },
+            ],
+        },
+        Common.ValueListWithFixedValues : true,
     )
 };
 
