@@ -14,7 +14,8 @@
   "type": "commonjs",
   "dependencies": {
     "@cap-js/sqlite": "^3.1.1",
-    "@sap/cds": "^10.1.1"
+    "@sap/cds": "^10.1.1",
+    "@sap/cds-common-content": "^3.2.0"
   },
   "devDependencies": {
     "@sap/cds-dk": "^10.1.0",
