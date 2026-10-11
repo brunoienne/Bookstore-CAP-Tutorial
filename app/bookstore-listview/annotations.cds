@@ -12,7 +12,7 @@ annotate service.Books with @(
             },
             {
                 $Type : 'UI.DataField',
-                Value : genre,
+                Value : genre_code,
                 Label : 'Genre',
             },
             {
@@ -85,7 +85,7 @@ annotate service.Books with @(
         {
             $Type : 'UI.DataField',
             Label : 'Genre',
-            Value : genre,
+            Value : genre_code,
         },
         {
             $Type : 'UI.DataField',
@@ -106,6 +106,11 @@ annotate service.Books with @(
             Value : stock,
             Label : 'Stock',
         },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookstoreService.addStock',
+            Label : 'addStock',
+        },
     ],
     UI.SelectionFields : [
         status.code,
@@ -120,7 +125,7 @@ annotate service.Books with @(
         TypeImageUrl : 'sap-icon://education',
         Description : {
             $Type : 'UI.DataField',
-            Value : genre,
+            Value : genre_code,
         },
     },
     UI.FieldGroup #Entryinformation : {
@@ -159,6 +164,23 @@ annotate service.Books with @(
             },
         ],
     },
+    UI.Identification : [
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookstoreService.addStock',
+            Label : 'Add Stock',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookstoreService.changePublishedDate',
+            Label : 'Change Published Date',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'BookstoreService.changeStatus',
+            Label : 'Change Status',
+        },
+    ],
 );
 
 annotate service.Books with {
@@ -276,6 +298,22 @@ annotate service.Books with {
                 },
             ],
             Label : 'Currency',
+        },
+        Common.ValueListWithFixedValues : true,
+)};
+
+annotate service.Books with {
+    genre @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Genres',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : genre_code,
+                    ValueListProperty : 'code',
+                },
+            ],
         },
         Common.ValueListWithFixedValues : true,
 )};

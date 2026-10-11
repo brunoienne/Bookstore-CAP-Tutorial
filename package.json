@@ -19,12 +19,16 @@
   },
   "devDependencies": {
     "@sap/cds-dk": "^10.1.0",
-    "cds-plugin-ui5": "0.13.6"
+    "cds-plugin-ui5": "0.13.6",
+    "@cap-js/cds-typer": ">=0.1"
   },
   "workspaces": [
     "app/*"
   ],
   "sapux": [
     "app/bookstore-listview"
-  ]
+  ],
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
 }
