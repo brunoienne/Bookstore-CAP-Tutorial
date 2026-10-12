@@ -5,6 +5,7 @@ const cds = require('@sap/cds')
 module.exports = class BookstoreService extends cds.ApplicationService {
   init() {
     const { Books } = cds.entities('BookstoreService')
+    const { Authors } = cds.entities('BookstoreService')
 
     this.on('addStock', Books, async (req) => {
       const { ID } = req.params[0];
@@ -44,6 +45,19 @@ module.exports = class BookstoreService extends cds.ApplicationService {
 
     })
 
+    this.on('addDiscount', async () => {
+      await UPDATE(Books).set({
+        price: {
+          func: 'ROUND',
+          args: [{
+            xpr: [{ ref: ['price'] }, '*',
+            { val: 0.9 }]
+          },
+          { val: 2 }]
+        }
+      })
+    })
+
     this.before('READ', Books, async (req) => {
       console.log('Before READ books')
     })
@@ -52,6 +66,20 @@ module.exports = class BookstoreService extends cds.ApplicationService {
         if (book.genre_code === Genre.Fantasy) {
           book.price = book.price * 0.8;
         }
+      }
+    })
+
+    this.after('READ', Authors, async (authors) => {
+      const ids = authors.map(author => author.ID)
+      const bookCount = await SELECT
+        .from('tutorial.db.Books').columns('author_ID', { func: 'count', args: [{ val: 1 }], as: 'count' })
+        .where({ author_ID: { in: ids } })
+        .groupBy('author_ID');
+        
+      for (const author of authors) {
+        author.bookCount = bookCount.find(
+          book => book.author_ID === author.ID
+        )?.count ?? 0;
       }
     })
 

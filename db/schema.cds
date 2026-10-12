@@ -4,7 +4,7 @@ using {
     sap.common.Currencies,
 } from '@sap/cds/common';
 
-namespace tutorial.db; 
+namespace tutorial.db;
 
 entity Books : cuid, managed {
     title       : String;
@@ -50,9 +50,10 @@ entity BookStatus {
 
 
 entity Authors : cuid, managed {
-    name  : String;
-    books : Association to many Books
-                on books.author = $self;
+    name              : String;
+    books             : Association to many Books
+                            on books.author = $self;
+    virtual bookCount : Integer;
 }
 
 entity Chapters : cuid, managed {

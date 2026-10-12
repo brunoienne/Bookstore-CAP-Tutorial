@@ -6,7 +6,8 @@
   "scripts": {
     "start": "cds serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch-bookstore-listview": "cds watch --open bookstorelistview/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-bookstore-listview": "cds watch --open bookstorelistview/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-authors_list_page": "cds watch --open authorslistpage/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "keywords": [],
   "author": "",
@@ -26,7 +27,8 @@
     "app/*"
   ],
   "sapux": [
-    "app/bookstore-listview"
+    "app/bookstore-listview",
+    "app/authors_list_page"
   ],
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js"
